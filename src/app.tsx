@@ -1,5 +1,30 @@
+import {Route, Routes} from 'react-router-dom'
+import {
+  HomePage,
+  PlayerPage,
+  PlayersPage,
+  PlayerStatsPage,
+  TeamPage,
+  TeamsPage,
+} from './pages'
+
 function App() {
-  return <h1>React Breadcrumbs</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="teams">
+        <Route index element={<TeamsPage />} />
+        <Route path=":teamId" element={<TeamPage />} />
+        <Route path="players">
+          <Route index element={<PlayersPage />} />
+          <Route path=":playerId">
+            <Route index element={<PlayerPage />} />
+            <Route path="stats" element={<PlayerStatsPage />} />
+          </Route>
+        </Route>
+      </Route>
+    </Routes>
+  )
 }
 
-export default App;
+export default App
