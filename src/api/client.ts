@@ -1,4 +1,4 @@
-const baseUrl = `https://www.balldontlie.io/api/v1`
+export const baseUrl = 'https://myapi.com'
 
 export async function client<TData>(
   endpoint: string,
@@ -9,7 +9,7 @@ export async function client<TData>(
     ...customConfig,
   }
 
-  const response = await window.fetch(`${baseUrl}/${endpoint}`, config)
+  const response = await window.fetch(`${baseUrl}${endpoint}`, config)
   const json: TData = await response.json()
   return json
 }

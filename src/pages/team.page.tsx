@@ -1,4 +1,4 @@
-import {useTeam} from 'api/teams'
+import {useTeam} from 'api/teams/hooks'
 import {useParams} from 'react-router-dom'
 import {PageHeader} from 'ui-kit/page-header'
 
@@ -10,7 +10,7 @@ export function TeamPage() {
   }
   return (
     <>
-      <PageHeader title={team.fullName} />
+      <PageHeader title={team.name} />
       <div className="prose">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae

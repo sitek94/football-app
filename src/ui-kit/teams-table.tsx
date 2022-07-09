@@ -1,4 +1,4 @@
-import {Team} from 'api/teams'
+import {Team} from 'api/teams/models'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 
@@ -7,10 +7,10 @@ interface TeamsTableProps {
 }
 
 const columns: {name: string; accessor: keyof Team}[] = [
-  {name: 'Full Name', accessor: 'fullName'},
-  {name: 'Conference', accessor: 'conference'},
-  {name: 'Division', accessor: 'division'},
-  {name: 'City', accessor: 'city'},
+  {name: 'Logo', accessor: 'logo'},
+  {name: 'Name', accessor: 'name'},
+  {name: 'Venue', accessor: 'venue'},
+  {name: 'Founded', accessor: 'founded'},
 ]
 
 export function TeamsTable({teams}: TeamsTableProps) {
@@ -43,9 +43,19 @@ export function TeamsTable({teams}: TeamsTableProps) {
                     )}
                   >
                     {columns.map(({accessor}) => {
-                      const value = team[accessor]
+                      if (accessor === 'logo') {
+                        return (
+                          <td className="px-6 py-4">
+                            <img
+                              className="h-12 w-12"
+                              src={team.logo}
+                              alt={`${team.name} logo`}
+                            />
+                          </td>
+                        )
+                      }
 
-                      if (accessor === 'fullName') {
+                      if (accessor === 'name') {
                         return (
                           <td
                             key={accessor}
@@ -60,12 +70,15 @@ export function TeamsTable({teams}: TeamsTableProps) {
                           </td>
                         )
                       }
+
                       return (
                         <td
                           key={accessor}
                           className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
                         >
-                          {value}
+                          {accessor === 'venue'
+                            ? team.venue.name
+                            : team[accessor]}
                         </td>
                       )
                     })}

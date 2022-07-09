@@ -1,4 +1,4 @@
-import {useTeams} from 'api/teams'
+import {useTeams} from 'api/teams/hooks'
 import {PageHeader} from 'ui-kit/page-header'
 import {TeamsTable} from 'ui-kit/teams-table'
 
