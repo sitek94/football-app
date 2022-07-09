@@ -45,7 +45,7 @@ export function TeamsTable({teams}: TeamsTableProps) {
                     {columns.map(({accessor}) => {
                       if (accessor === 'logo') {
                         return (
-                          <td className="px-6 py-4">
+                          <td key={accessor} className="px-6 py-4">
                             <img
                               className="h-12 w-12"
                               src={team.logo}

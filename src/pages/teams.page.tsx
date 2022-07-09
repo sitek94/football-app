@@ -3,7 +3,15 @@ import {PageHeader} from 'ui-kit/page-header'
 import {TeamsTable} from 'ui-kit/teams-table'
 
 export function TeamsPage() {
-  const {teams} = useTeams()
+  const {teams, isLoading, isError} = useTeams()
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (isError) {
+    return <div>Error</div>
+  }
 
   return (
     <>
