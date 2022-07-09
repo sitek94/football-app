@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {Team} from '../api/models'
-import {Link, useLocation} from 'react-router-dom'
-import {ArrowRightIcon} from '@heroicons/react/outline'
+import {Link} from 'react-router-dom'
 import clsx from 'clsx'
+
+import {Team} from 'api/models'
 
 interface TeamsTableProps {
   teams: Team[]
@@ -19,8 +19,8 @@ export function TeamsTable({teams}: TeamsTableProps) {
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+          <div className="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
@@ -28,7 +28,7 @@ export function TeamsTable({teams}: TeamsTableProps) {
                     <th
                       key={name}
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       {name}
                     </th>
@@ -54,7 +54,7 @@ export function TeamsTable({teams}: TeamsTableProps) {
                             className="text-sm font-medium text-gray-900"
                           >
                             <Link
-                              className="block cursor-pointer underline px-6 py-4 whitespace-nowrap"
+                              className="block cursor-pointer whitespace-nowrap px-6 py-4 underline"
                               to={`${team.id}`}
                             >
                               {team[accessor]}
@@ -65,7 +65,7 @@ export function TeamsTable({teams}: TeamsTableProps) {
                       return (
                         <td
                           key={accessor}
-                          className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                          className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
                         >
                           {value}
                         </td>

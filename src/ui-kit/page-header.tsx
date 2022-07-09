@@ -6,8 +6,8 @@ interface PageHeaderProps {
 
 export function PageHeader({title}: PageHeaderProps) {
   return (
-    <div className="lg:flex lg:items-center lg:justify-between mb-4">
-      <div className="flex-1 min-w-0">
+    <div className="mb-4 lg:flex lg:items-center lg:justify-between">
+      <div className="min-w-0 flex-1">
         <nav className="flex" aria-label="Breadcrumb">
           <ol role="list" className="flex items-center space-x-4">
             <li>
@@ -23,7 +23,7 @@ export function PageHeader({title}: PageHeaderProps) {
             <li>
               <div className="flex items-center">
                 <ChevronRightIcon
-                  className="flex-shrink-0 h-5 w-5 text-gray-400"
+                  className="h-5 w-5 flex-shrink-0 text-gray-400"
                   aria-hidden="true"
                 />
                 <a
@@ -36,7 +36,7 @@ export function PageHeader({title}: PageHeaderProps) {
             </li>
           </ol>
         </nav>
-        <h2 className="mt-2 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+        <h2 className="mt-2 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl">
           {title}
         </h2>
       </div>

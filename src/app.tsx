@@ -1,4 +1,7 @@
 import {Route, Routes} from 'react-router-dom'
+
+import {AppLayout} from 'ui-kit/app-layout'
+
 import {
   HomePage,
   PlayerPage,
@@ -6,8 +9,7 @@ import {
   PlayerStatsPage,
   TeamPage,
   TeamsPage,
-} from './pages'
-import {AppLayout} from './ui-kit/app-layout'
+} from 'pages'
 
 function App() {
   return (

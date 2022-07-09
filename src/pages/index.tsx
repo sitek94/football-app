@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {useTeams} from '../api/hooks'
-import {PageHeader} from '../ui-kit/page-header'
-import {TeamsTable} from '../ui-kit/teams-table'
-import {Team} from '../api/models'
+
+import {useTeams} from 'api/hooks'
+import {PageHeader} from 'ui-kit/page-header'
+import {TeamsTable} from 'ui-kit/teams-table'
 
 export function HomePage() {
   return (

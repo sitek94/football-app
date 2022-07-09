@@ -1,6 +1,7 @@
 import {NavLink, Outlet} from 'react-router-dom'
-import {Footer} from './footer'
 import clsx from 'clsx'
+
+import {Footer} from 'ui-kit/footer'
 
 const navigation = [
   {
@@ -15,10 +16,10 @@ const navigation = [
 
 export function AppLayout() {
   return (
-    <div className="h-full flex flex-col">
+    <div className="flex h-full flex-col">
       <header className="bg-gray-800 pb-32">
         <div className="py-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold text-white">{`NBA - Ball Don't Lie`}</h1>
 
             <nav className="flex gap-2">
@@ -32,7 +33,7 @@ export function AppLayout() {
                         isActive
                           ? 'bg-gray-900 text-white'
                           : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'px-3 py-2 rounded-md text-sm font-medium',
+                        'rounded-md px-3 py-2 text-sm font-medium',
                       )
                     }
                   >
@@ -46,8 +47,8 @@ export function AppLayout() {
       </header>
 
       <main className="-mt-32 flex-grow">
-        <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+          <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
             <Outlet />
           </div>
         </div>
