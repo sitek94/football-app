@@ -10,6 +10,7 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
+    "clsx": "^1.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-query": "^3.39.1",

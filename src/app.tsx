@@ -7,7 +7,7 @@ import {
   TeamPage,
   TeamsPage,
 } from './pages'
-import {AppLayout} from './ui-kit/layout'
+import {AppLayout} from './ui-kit/app-layout'
 
 function App() {
   return (
