@@ -2,5 +2,9 @@ import {useQuery} from 'react-query'
 import * as client from './client'
 
 export function useTeams() {
-  return useQuery('teams', client.getTeams)
+  const {data: teams, ...query} = useQuery('teams', client.getTeams)
+  return {
+    ...query,
+    teams,
+  }
 }

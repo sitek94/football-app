@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {useTeams} from '../api/hooks'
 import {PageHeader} from '../ui-kit/page-header'
+import {TeamsTable} from '../ui-kit/teams-table'
+import {Team} from '../api/models'
 
 export function HomePage() {
   return (
@@ -30,9 +32,12 @@ export function HomePage() {
 }
 
 export function TeamsPage() {
+  const {teams} = useTeams()
+
   return (
     <>
       <PageHeader title="Teams" />
+      {teams?.length > 0 ? <TeamsTable teams={teams} /> : <p>No teams found</p>}
     </>
   )
 }
