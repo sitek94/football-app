@@ -1,15 +1,13 @@
-import * as React from 'react'
-import {Link} from 'react-router-dom'
+import {Team} from 'api/teams'
 import clsx from 'clsx'
-
-import {Team} from 'api/models'
+import {Link} from 'react-router-dom'
 
 interface TeamsTableProps {
   teams: Team[]
 }
 
 const columns: {name: string; accessor: keyof Team}[] = [
-  {name: 'Full Name', accessor: 'full_name'},
+  {name: 'Full Name', accessor: 'fullName'},
   {name: 'Conference', accessor: 'conference'},
   {name: 'Division', accessor: 'division'},
   {name: 'City', accessor: 'city'},
@@ -47,7 +45,7 @@ export function TeamsTable({teams}: TeamsTableProps) {
                     {columns.map(({accessor}) => {
                       const value = team[accessor]
 
-                      if (accessor === 'full_name') {
+                      if (accessor === 'fullName') {
                         return (
                           <td
                             key={accessor}

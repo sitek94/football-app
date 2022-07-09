@@ -1,15 +1,10 @@
+import {PlayerPage, PlayersPage, PlayerStatsPage} from 'pages'
+import {HomePage} from 'pages/home.page'
+import {TeamPage} from 'pages/team.page'
+import {TeamsPage} from 'pages/teams.page'
 import {Route, Routes} from 'react-router-dom'
 
 import {AppLayout} from 'ui-kit/app-layout'
-
-import {
-  HomePage,
-  PlayerPage,
-  PlayersPage,
-  PlayerStatsPage,
-  TeamPage,
-  TeamsPage,
-} from 'pages'
 
 function App() {
   return (
