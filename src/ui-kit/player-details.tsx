@@ -37,7 +37,7 @@ export function PlayerDetails({player}: PlayerDetailsProps) {
                   {label}
                 </th>
                 <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
-                  {value}
+                  {value ?? '---'}
                 </td>
               </tr>
             ))}
