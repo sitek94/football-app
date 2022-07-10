@@ -10,18 +10,18 @@ export interface Player {
   weight: string
   injured: boolean
   photo: string
-  statistics: Statistic[]
+  statistics: Statistic
+  team: PlayerTeam
+  league: League
 }
 
 interface Birth {
-  date: Date
+  date: string
   place: string
   country: string
 }
 
 interface Statistic {
-  team: PlayerTeam
-  league: League
   games: Games
   substitutes: Substitutes
   shots: Shots

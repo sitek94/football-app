@@ -10,15 +10,33 @@ export function TeamPage() {
   }
   return (
     <>
-      <PageHeader title={team.name} />
-      <div className="prose">
+      <PageHeader
+        title={team.name}
+        links={[
+          {name: 'Overview', to: '.'},
+          {name: 'Players', to: 'players'},
+        ]}
+      />
+
+      <article className="prose">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-          debitis, doloribus eaque facere possimus repudiandae sunt. Aspernatur,
-          commodi eligendi eveniet excepturi fuga inventore ipsum odit porro
-          quibusdam quos unde, ut.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi,
+          euismod euismod nisi nisi euismod nisi.
         </p>
-      </div>
+
+        <figure>
+          <img src={team.venue.image} alt={team.venue.name} />
+          <figcaption>{`${team.venue.name}, ${team.venue.city}`}</figcaption>
+        </figure>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos incidunt
+          nostrum ullam unde. Ab amet, aspernatur deserunt dignissimos ducimus
+          excepturi, inventore labore laboriosam molestiae quaerat quisquam quo
+          reprehenderit totam, voluptas.
+        </p>
+      </article>
     </>
   )
 }

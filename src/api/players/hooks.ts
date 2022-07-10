@@ -1,13 +1,16 @@
 import {client} from 'api/client'
 import {Player} from 'api/players/models'
+import {Team} from 'api/teams/models'
 import {useQuery, useQueryClient} from 'react-query'
 
-function getPlayers() {
-  return client<Player[]>('/players')
+function getPlayers(teamId: Team['id']) {
+  return client<Player[]>(`/teams/${teamId}/players`)
 }
 
-export function usePlayers() {
-  const {data: players, ...query} = useQuery('players', getPlayers)
+export function usePlayers(teamId?: Team['id']) {
+  const {data: players, ...query} = useQuery('players', () =>
+    getPlayers(teamId),
+  )
   return {
     ...query,
     players,

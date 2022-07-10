@@ -1,20 +1,17 @@
 import {baseUrl} from 'api/client'
-import {players} from 'mocks/data/players'
-import {teams} from 'mocks/data/teams'
+import * as db from 'db'
 import {rest} from 'msw'
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 export const handlers = [
   rest.get(`${baseUrl}/teams`, (req, res, ctx) => {
-    const pageSize = 10
-
-    return res(ctx.status(200), ctx.json(teams.slice(0, pageSize)))
+    return res(ctx.status(200), ctx.json(db.teams))
   }),
 
   rest.get(`${baseUrl}/teams/:teamId`, (req, res, ctx) => {
     const {teamId} = req.params
-    const team = teams.find(t => t.id === teamId)
+    const team = db.teams.find(t => t.id === teamId)
     if (!team) {
       return res(ctx.status(404))
     }
@@ -22,20 +19,18 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(team))
   }),
 
-  rest.get(`${baseUrl}/players`, (req, res, ctx) => {
-    const pageSize = 10
-
-    return res(ctx.status(200), ctx.json(players.slice(0, pageSize)))
+  rest.get(`${baseUrl}/teams/:teamId/players`, (req, res, ctx) => {
+    const {teamId} = req.params
+    const playersForTeam = db.players.filter(p => p.team.id === teamId)
+    return res(ctx.status(200), ctx.json(playersForTeam))
   }),
-].map(handler => {
-  // @ts-expect-error
+].map((handler: any) => {
   const originalResolver = handler.resolver
-  // @ts-expect-error
   handler.resolver = async (req, res, ctx) => {
     try {
       return originalResolver(req, res, ctx)
     } finally {
-      await sleep(2000)
+      await sleep(0)
     }
   }
   return handler
