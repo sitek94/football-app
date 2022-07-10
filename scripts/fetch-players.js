@@ -53,7 +53,7 @@ const premierLeagueId = 39
 async function run() {
   const allPlayers = await fetchPlayers({
     leagueId: premierLeagueId,
-    seasonYear: 2022,
+    seasonYear: 2021,
     pageStart: 0,
     pageEnd: 39,
   })

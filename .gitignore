@@ -25,3 +25,6 @@ dist-ssr
 
 # Env
 .env
+
+# Scraped data
+scripts/data

@@ -17,6 +17,11 @@ export function saveJson(filename, json) {
   fs.writeFileSync(filePath, jsonString)
 }
 
+export function readJson(filename) {
+  const filePath = `${__dirname}/data/${filename}.json`
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+}
+
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
