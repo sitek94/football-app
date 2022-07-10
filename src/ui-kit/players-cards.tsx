@@ -6,22 +6,7 @@ interface PlayerCardsProps {
   players: Player[]
 }
 
-function getBadgeColor(position: Player['statistics']['games']['position']) {
-  switch (position) {
-    case 'Goalkeeper':
-      return 'bg-green-100 text-green-800'
-    case 'Defender':
-      return 'bg-blue-100 text-blue-800'
-    case 'Midfielder':
-      return 'bg-yellow-100 text-yellow-800'
-    case 'Attacker':
-      return 'bg-red-100 text-red-800'
-    default:
-      return 'bg-gray-100 text-gray-800'
-  }
-}
-
-export function PlayerCards({players}: PlayerCardsProps) {
+export function PlayersCards({players}: PlayerCardsProps) {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {players.map(player => (
@@ -61,4 +46,19 @@ export function PlayerCards({players}: PlayerCardsProps) {
       ))}
     </div>
   )
+}
+
+function getBadgeColor(position: Player['statistics']['games']['position']) {
+  switch (position) {
+    case 'Goalkeeper':
+      return 'bg-green-100 text-green-800'
+    case 'Defender':
+      return 'bg-blue-100 text-blue-800'
+    case 'Midfielder':
+      return 'bg-yellow-100 text-yellow-800'
+    case 'Attacker':
+      return 'bg-red-100 text-red-800'
+    default:
+      return 'bg-gray-100 text-gray-800'
+  }
 }

@@ -1,5 +1,6 @@
-import {PlayerPage, PlayerStatsPage} from 'pages'
+import {PlayerStatsPage} from 'pages'
 import {HomePage} from 'pages/home.page'
+import {PlayerPage} from 'pages/player.page'
 import {PlayersPage} from 'pages/players.page'
 import {TeamPage} from 'pages/team.page'
 import {TeamsPage} from 'pages/teams.page'

@@ -4,7 +4,7 @@ import {Team} from 'api/teams/teams.models'
 import {useQuery, useQueryClient} from 'react-query'
 
 function getPlayers(teamId: Team['id']) {
-  return client<Player[]>(`/teams/${teamId}/players`)
+  return client<Player[]>(`/players?teamId=${teamId}`)
 }
 
 export function usePlayers(teamId?: Team['id']) {

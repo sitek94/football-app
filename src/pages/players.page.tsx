@@ -1,7 +1,7 @@
 import {usePlayers} from 'api/players/players.hooks'
 import {useParams} from 'react-router-dom'
 import {PageHeader} from 'ui-kit/page-header'
-import {PlayerCards} from 'ui-kit/player-cards'
+import {PlayersCards} from 'ui-kit/players-cards'
 
 export function PlayersPage() {
   const teamId = useParams().teamId!
@@ -17,7 +17,7 @@ export function PlayersPage() {
         ]}
       />
       {players?.length > 0 ? (
-        <PlayerCards players={players} />
+        <PlayersCards players={players} />
       ) : (
         <p>No players found</p>
       )}
