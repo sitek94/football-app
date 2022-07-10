@@ -7,6 +7,7 @@ import {TeamsPage} from 'pages/teams.page'
 import {useRoutes} from 'react-router-dom'
 
 import {AppLayout} from 'ui-kit/app-layout'
+import {PlayerBreadcrumb, TeamBreadcrumb} from 'ui-kit/breadcrumbs'
 import {BreadcrumbsRoute} from 'use-react-router-breadcrumbs'
 
 export const routes: BreadcrumbsRoute[] = [
@@ -22,6 +23,7 @@ export const routes: BreadcrumbsRoute[] = [
           {index: true, element: <TeamsPage />},
           {
             path: ':teamId',
+            breadcrumb: TeamBreadcrumb,
             children: [
               {index: true, element: <TeamPage />},
               {
@@ -30,6 +32,7 @@ export const routes: BreadcrumbsRoute[] = [
                   {index: true, element: <PlayersPage />},
                   {
                     path: ':playerId',
+                    breadcrumb: PlayerBreadcrumb,
                     children: [
                       {index: true, element: <PlayerPage />},
                       {
