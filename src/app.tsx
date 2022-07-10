@@ -3,7 +3,7 @@ import {HomePage} from 'pages/home.page'
 import {PlayersPage} from 'pages/players.page'
 import {TeamPage} from 'pages/team.page'
 import {TeamsPage} from 'pages/teams.page'
-import {Route, RouteObject, Routes} from 'react-router-dom'
+import {RouteObject, useRoutes} from 'react-router-dom'
 
 import {AppLayout} from 'ui-kit/app-layout'
 
@@ -46,26 +46,7 @@ const routes: RouteObject[] = [
 ]
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<AppLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="teams">
-          <Route index element={<TeamsPage />} />
-          <Route path=":teamId">
-            <Route index element={<TeamPage />} />
-            <Route path="players">
-              <Route index element={<PlayersPage />} />
-              <Route path=":playerId">
-                <Route index element={<PlayerPage />} />
-                <Route path="stats" element={<PlayerStatsPage />} />
-              </Route>
-            </Route>
-          </Route>
-        </Route>
-      </Route>
-    </Routes>
-  )
+  return useRoutes(routes)
 }
 
 export default App

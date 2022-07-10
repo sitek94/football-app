@@ -1,5 +1,5 @@
-import {NavLink, Outlet} from 'react-router-dom'
 import clsx from 'clsx'
+import {NavLink, Outlet} from 'react-router-dom'
 
 import {Footer} from 'ui-kit/footer'
 
@@ -14,13 +14,15 @@ const navigation = [
   },
 ]
 
+const title = 'Football App'
+
 export function AppLayout() {
   return (
     <div className="flex h-full flex-col">
       <header className="bg-gray-800 pb-32">
         <div className="py-10">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-white">{`NBA - Ball Don't Lie`}</h1>
+            <h1 className="text-3xl font-bold text-white">{title}</h1>
 
             <nav className="flex gap-2">
               {navigation.map(item => {
