@@ -23,7 +23,6 @@ export function AppLayout() {
         <div className="py-10">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold text-white">{title}</h1>
-
             <nav className="flex gap-2">
               {navigation.map(item => {
                 return (

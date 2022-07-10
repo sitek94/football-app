@@ -4,14 +4,16 @@ import {PlayerPage} from 'pages/player.page'
 import {PlayersPage} from 'pages/players.page'
 import {TeamPage} from 'pages/team.page'
 import {TeamsPage} from 'pages/teams.page'
-import {RouteObject, useRoutes} from 'react-router-dom'
+import {useRoutes} from 'react-router-dom'
 
 import {AppLayout} from 'ui-kit/app-layout'
+import {BreadcrumbsRoute} from 'use-react-router-breadcrumbs'
 
-const routes: RouteObject[] = [
+export const routes: BreadcrumbsRoute[] = [
   {
-    path: '/',
+    path: '',
     element: <AppLayout />,
+    breadcrumb: 'Home',
     children: [
       {index: true, element: <HomePage />},
       {

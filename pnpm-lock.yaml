@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@headlessui/react': ^1.6.6
@@ -22,17 +22,19 @@ specifiers:
   react-router-dom: ^6.3.0
   tailwindcss: ^3.1.5
   typescript: ^4.6.3
+  use-react-router-breadcrumbs: ^3.2.1
   vite: ^2.9.9
   vite-tsconfig-paths: ^3.5.0
 
 dependencies:
-  '@headlessui/react': 1.6.6_react-dom@18.2.0+react@18.2.0
+  '@headlessui/react': 1.6.6_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 1.0.6_react@18.2.0
   clsx: 1.2.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-query: 3.39.1_react-dom@18.2.0+react@18.2.0
-  react-router-dom: 6.3.0_react-dom@18.2.0+react@18.2.0
+  react-query: 3.39.1_biqbaboplfbrettd7655fr4n2y
+  react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  use-react-router-breadcrumbs: 3.2.1_react@18.2.0
 
 devDependencies:
   '@tailwindcss/typography': 0.5.3_tailwindcss@3.1.5
@@ -326,7 +328,7 @@ packages:
     resolution: {integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==}
     dev: true
 
-  /@headlessui/react/1.6.6_react-dom@18.2.0+react@18.2.0:
+  /@headlessui/react/1.6.6_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-MFJtmj9Xh/hhBMhLccGbBoSk+sk61BlP6sJe4uQcVMtXZhCgGqd2GyIQzzmsdPdTEWGSF434CBi8mnhR6um46Q==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -1688,7 +1690,7 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-query/3.39.1_react-dom@18.2.0+react@18.2.0:
+  /react-query/3.39.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-qYKT1bavdDiQZbngWZyPotlBVzcBjDYEJg5RQLBa++5Ix5jjfbEYJmHSZRZD+USVHUSvl/ey9Hu+QfF1QAK80A==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1712,7 +1714,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-router-dom/6.3.0_react-dom@18.2.0+react@18.2.0:
+  /react-router-dom/6.3.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==}
     peerDependencies:
       react: '>=16.8'
@@ -2043,6 +2045,15 @@ packages:
       escalade: 3.1.1
       picocolors: 1.0.0
     dev: true
+
+  /use-react-router-breadcrumbs/3.2.1_react@18.2.0:
+    resolution: {integrity: sha512-GpDhGo/A0I1ckGLER1/YZX/tgX+KOAyCGG2HgFIc0SVzQ30hTilufNdNRN3Gt+WXJW0zgn48CxxKvKSe+xA3TA==}
+    peerDependencies:
+      react: '>=16.8'
+      react-router: '>=6.0.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

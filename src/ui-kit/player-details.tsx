@@ -29,7 +29,7 @@ export function PlayerDetails({player}: PlayerDetailsProps) {
               ],
               ['Nationality', player.nationality],
             ].map(([label, value]) => (
-              <tr className="hover:bg-gray-50">
+              <tr className="hover:bg-gray-50" key={label}>
                 <th
                   scope="row"
                   className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
