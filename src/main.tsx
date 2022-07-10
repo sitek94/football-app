@@ -8,16 +8,23 @@ import {worker} from 'server/browser'
 import App from './app'
 import './index.css'
 
-worker.start()
+async function main() {
+  await worker.start({
+    onUnhandledRequest: 'bypass',
+  })
 
-const queryClient = new QueryClient()
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <Router>
-        <App />
-      </Router>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
-  </React.StrictMode>,
-)
+  const queryClient = new QueryClient()
+
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <App />
+        </Router>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </React.StrictMode>,
+  )
+}
+
+main()
