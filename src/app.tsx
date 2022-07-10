@@ -12,7 +12,7 @@ import {BreadcrumbsRoute} from 'use-react-router-breadcrumbs'
 
 export const routes: BreadcrumbsRoute[] = [
   {
-    path: '',
+    path: '/',
     element: <AppLayout />,
     breadcrumb: 'Home',
     children: [
