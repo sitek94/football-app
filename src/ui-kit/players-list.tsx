@@ -3,7 +3,7 @@ import {
   ChevronRightIcon,
   MailIcon,
 } from '@heroicons/react/solid'
-import {Player} from 'api/players/models'
+import {Player} from 'api/players/players.models'
 import {Link} from 'react-router-dom'
 
 interface PlayersListProps {

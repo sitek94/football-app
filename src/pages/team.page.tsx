@@ -1,4 +1,4 @@
-import {useTeam} from 'api/teams/hooks'
+import {useTeam} from 'api/teams/teams.hooks'
 import {useParams} from 'react-router-dom'
 import {PageHeader} from 'ui-kit/page-header'
 

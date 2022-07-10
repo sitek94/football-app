@@ -1,4 +1,4 @@
-import {Team} from 'api/teams/models'
+import {Team} from 'api/teams/teams.models'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 

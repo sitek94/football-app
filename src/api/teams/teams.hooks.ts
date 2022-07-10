@@ -1,5 +1,5 @@
 import {client} from 'api/client'
-import {Team} from 'api/teams/models'
+import {Team} from 'api/teams/teams.models'
 import {useQuery, useQueryClient} from 'react-query'
 
 function getTeams() {

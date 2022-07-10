@@ -1,4 +1,4 @@
-import {usePlayers} from 'api/players/hooks'
+import {usePlayers} from 'api/players/players.hooks'
 import {useParams} from 'react-router-dom'
 import {PageHeader} from 'ui-kit/page-header'
 import {PlayersList} from 'ui-kit/players-list'

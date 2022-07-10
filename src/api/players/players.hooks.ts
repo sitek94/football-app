@@ -1,6 +1,6 @@
 import {client} from 'api/client'
-import {Player} from 'api/players/models'
-import {Team} from 'api/teams/models'
+import {Player} from 'api/players/players.models'
+import {Team} from 'api/teams/teams.models'
 import {useQuery, useQueryClient} from 'react-query'
 
 function getPlayers(teamId: Team['id']) {
