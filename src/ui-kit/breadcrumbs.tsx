@@ -1,28 +1,13 @@
 import {ChevronRightIcon, HomeIcon} from '@heroicons/react/solid'
-import {usePlayer} from 'api/players/players.hooks'
-import {useTeam} from 'api/teams/teams.hooks'
-import {routes} from 'app'
 import * as React from 'react'
 import {Link} from 'react-router-dom'
-import useReactRouterBreadcrumbs, {
-  BreadcrumbComponentProps,
-} from 'use-react-router-breadcrumbs'
+import {BreadcrumbData} from 'use-react-router-breadcrumbs'
 
-export function PlayerBreadcrumb({match}: BreadcrumbComponentProps) {
-  const {player} = usePlayer(match.params.playerId)
-
-  return <>{player?.name || 'Player'}</>
+interface BreadcrumbsProps {
+  breadcrumbs: BreadcrumbData[]
 }
 
-export function TeamBreadcrumb({match}: BreadcrumbComponentProps) {
-  const {team} = useTeam(match.params.teamId)
-
-  return <>{team?.name || 'Team'}</>
-}
-
-export function Breadcrumbs() {
-  const breadcrumbs = useReactRouterBreadcrumbs(routes)
-
+export function Breadcrumbs({breadcrumbs}: BreadcrumbsProps) {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-4">

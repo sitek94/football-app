@@ -1,6 +1,6 @@
 import {useTeams} from 'api/teams/teams.hooks'
+import {TeamsTable} from 'pages/teams/teams-table'
 import {PageHeader} from 'ui-kit/page-header'
-import {TeamsTable} from 'ui-kit/teams-table'
 
 export function TeamsPage() {
   const {teams, isLoading, isError} = useTeams()

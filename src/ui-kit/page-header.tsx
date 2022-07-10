@@ -1,6 +1,8 @@
 import clsx from 'clsx'
 import {NavLink} from 'react-router-dom'
+import {routes} from 'routes'
 import {Breadcrumbs} from 'ui-kit/breadcrumbs'
+import useReactRouterBreadcrumbs from 'use-react-router-breadcrumbs'
 
 interface PageHeaderProps {
   title: string
@@ -8,10 +10,12 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({title, links}: PageHeaderProps) {
+  const breadcrumbs = useReactRouterBreadcrumbs(routes)
+
   return (
     <div className="mb-8 lg:flex lg:items-center lg:justify-between">
       <div className="min-w-0 flex-1 space-y-8">
-        <Breadcrumbs />
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
 
         <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl">
           {title}
