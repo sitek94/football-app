@@ -62,8 +62,8 @@ interface Games {
   lineups: number | null
   minutes: number | null
   number: number | null
-  position: string
-  rating: number | null
+  position: 'Defender' | 'Midfielder' | 'Attacker' | 'Goalkeeper' | string
+  rating: string | null
   captain: boolean
 }
 

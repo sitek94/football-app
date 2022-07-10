@@ -1,8 +1,3 @@
-import {
-  CheckCircleIcon,
-  ChevronRightIcon,
-  MailIcon,
-} from '@heroicons/react/solid'
 import {Player} from 'api/players/players.models'
 import {Link} from 'react-router-dom'
 
@@ -32,37 +27,16 @@ export function PlayersList({players}: PlayersListProps) {
                         {player.name}
                       </p>
                       <p className="mt-2 flex items-center text-sm text-gray-500">
-                        <MailIcon
-                          className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                          aria-hidden="true"
-                        />
                         <span className="truncate">{player.nationality}</span>
                       </p>
                     </div>
-                    <div className="hidden md:block">
-                      <div>
-                        <p className="text-sm text-gray-900">
-                          DOB{' '}
-                          <time dateTime={player.birth.date}>
-                            {player.birth.date}
-                          </time>
-                        </p>
-                        <p className="mt-2 flex items-center text-sm text-gray-500">
-                          <CheckCircleIcon
-                            className="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
-                            aria-hidden="true"
-                          />
-                          {player.injured}
-                        </p>
-                      </div>
-                    </div>
+                    <p className="text-sm text-gray-900">
+                      Date of birth:{' '}
+                      <time dateTime={player.birth.date}>
+                        {player.birth.date}
+                      </time>
+                    </p>
                   </div>
-                </div>
-                <div>
-                  <ChevronRightIcon
-                    className="h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
                 </div>
               </div>
             </Link>
