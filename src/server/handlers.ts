@@ -1,7 +1,8 @@
-import * as db from 'db'
 import {rest} from 'msw'
 
 import {baseUrl} from '@api/client'
+
+import * as db from '@db/index'
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -41,7 +42,7 @@ export const handlers = [
     try {
       return originalResolver(req, res, ctx)
     } finally {
-      await sleep(0)
+      await sleep(2000)
     }
   }
   return handler

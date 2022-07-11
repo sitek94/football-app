@@ -1,9 +1,10 @@
 import clsx from 'clsx'
 import {NavLink} from 'react-router-dom'
-import {routes} from 'routes'
 import useReactRouterBreadcrumbs from 'use-react-router-breadcrumbs'
 
 import {Breadcrumbs} from '@ui-kit/breadcrumbs'
+
+import {routes} from '../routes'
 
 interface PageHeaderProps {
   title: string

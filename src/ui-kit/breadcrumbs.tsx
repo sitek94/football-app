@@ -19,8 +19,7 @@ export function Breadcrumbs({breadcrumbs}: BreadcrumbsProps) {
             const homeIcon = (
               <HomeIcon
                 className="h-5 w-5 flex-shrink-0 text-gray-400"
-                aria-hidden="true"
-                aria-labe="Home"
+                aria-label="Home"
               />
             )
             return (

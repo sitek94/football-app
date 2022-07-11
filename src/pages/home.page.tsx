@@ -1,4 +1,4 @@
-import premiereLeagueLogo from 'assets/premiere-league-logo.svg'
+import premiereLeagueLogo from '@assets/premiere-league-logo.svg'
 
 import {PageHeader} from '@ui-kit/page-header'
 
