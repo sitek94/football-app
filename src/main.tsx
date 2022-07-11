@@ -20,6 +20,8 @@ async function main() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
+        // Resources are not going to change very often
+        staleTime: 24 * 60 * 60 * 1000,
         suspense: true,
       },
     },
