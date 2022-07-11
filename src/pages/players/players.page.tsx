@@ -1,15 +1,7 @@
-import {useParams} from 'react-router-dom'
-
-import {usePlayers} from '@api/players/players.hooks'
-
-import {PlayersCards} from '@pages/players/players-cards'
-
 import {PageHeader} from '@ui-kit/page-header'
+import {PlayersCards} from './components/players-cards'
 
 export function PlayersPage() {
-  const teamId = useParams().teamId!
-  const {players} = usePlayers(teamId)
-
   return (
     <>
       <PageHeader
@@ -19,11 +11,7 @@ export function PlayersPage() {
           {name: 'Players', to: '.'},
         ]}
       />
-      {players?.length > 0 ? (
-        <PlayersCards players={players} />
-      ) : (
-        <p>No players found</p>
-      )}
+      <PlayersCards  />
     </>
   )
 }

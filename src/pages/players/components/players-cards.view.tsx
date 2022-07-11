@@ -1,13 +1,12 @@
+import {Player} from '@api/players/players.models'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
-
-import {Player} from '@api/players/players.models'
 
 interface PlayerCardsProps {
   players: Player[]
 }
 
-export function PlayersCards({players}: PlayerCardsProps) {
+export function PlayersCardsView({players}: PlayerCardsProps) {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {players.map(player => (
