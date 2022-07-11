@@ -14,7 +14,7 @@ const columns: {name: string; accessor: keyof Team}[] = [
   {name: 'Founded', accessor: 'founded'},
 ]
 
-export function TeamsTable({teams}: TeamsTableProps) {
+export function TeamsTableView({teams}: TeamsTableProps) {
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
