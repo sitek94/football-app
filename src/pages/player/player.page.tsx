@@ -1,7 +1,10 @@
-import {usePlayer} from 'api/players/players.hooks'
-import {PlayerDetails} from 'pages/player/player-details'
 import {useParams} from 'react-router-dom'
-import {PageHeader} from 'ui-kit/page-header'
+
+import {usePlayer} from '@api/players/players.hooks'
+
+import {PlayerDetails} from '@pages/player/player-details'
+
+import {PageHeader} from '@ui-kit/page-header'
 
 export function PlayerPage() {
   const playerId = useParams().playerId!

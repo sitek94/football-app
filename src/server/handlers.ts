@@ -1,6 +1,7 @@
-import {baseUrl} from 'api/client'
 import * as db from 'db'
 import {rest} from 'msw'
+
+import {baseUrl} from '@api/client'
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 

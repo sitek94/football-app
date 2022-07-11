@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,css}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx,cjs,js,jsx,css,html}'"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.3",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

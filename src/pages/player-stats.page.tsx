@@ -1,4 +1,4 @@
-import {PageHeader} from 'ui-kit/page-header'
+import {PageHeader} from '@ui-kit/page-header'
 
 export function PlayerStatsPage() {
   return (

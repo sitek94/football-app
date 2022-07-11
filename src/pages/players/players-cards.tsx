@@ -1,6 +1,7 @@
-import {Player} from 'api/players/players.models'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
+
+import {Player} from '@api/players/players.models'
 
 interface PlayerCardsProps {
   players: Player[]

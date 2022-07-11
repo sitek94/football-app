@@ -1,17 +1,20 @@
-import {usePlayer} from 'api/players/players.hooks'
-import {useTeam} from 'api/teams/teams.hooks'
-import {HomePage} from 'pages/home.page'
-import {PlayerStatsPage} from 'pages/player-stats.page'
-import {PlayerPage} from 'pages/player/player.page'
-import {PlayersPage} from 'pages/players/players.page'
-import {TeamPage} from 'pages/team/team.page'
-import {TeamsPage} from 'pages/teams/teams.page'
 import * as React from 'react'
-import {AppLayout} from 'ui-kit/app-layout'
 import {
   BreadcrumbComponentProps,
   BreadcrumbsRoute,
 } from 'use-react-router-breadcrumbs'
+
+import {usePlayer} from '@api/players/players.hooks'
+import {useTeam} from '@api/teams/teams.hooks'
+
+import {HomePage} from '@pages/home.page'
+import {PlayerStatsPage} from '@pages/player-stats.page'
+import {PlayerPage} from '@pages/player/player.page'
+import {PlayersPage} from '@pages/players/players.page'
+import {TeamPage} from '@pages/team/team.page'
+import {TeamsPage} from '@pages/teams/teams.page'
+
+import {AppLayout} from '@ui-kit/app-layout'
 
 export const routes: BreadcrumbsRoute[] = [
   {

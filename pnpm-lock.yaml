@@ -4,6 +4,7 @@ specifiers:
   '@headlessui/react': ^1.6.6
   '@heroicons/react': ^1.0.6
   '@tailwindcss/typography': ^0.5.3
+  '@trivago/prettier-plugin-sort-imports': ^3.2.0
   '@types/node': ^18.0.3
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
@@ -38,6 +39,7 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/typography': 0.5.3_tailwindcss@3.1.5
+  '@trivago/prettier-plugin-sort-imports': 3.2.0_prettier@2.7.1
   '@types/node': 18.0.3
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
@@ -76,6 +78,30 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
+  /@babel/core/7.13.10:
+    resolution: {integrity: sha512-bfIYcT0BdKeAZrovpMqX2Mx5NrgAckGbwT982AkdS5GNfn3KMGiprlBAtmBcFZRUmpaufS6WZFP8trvx8ptFDw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/generator': 7.18.7
+      '@babel/helper-compilation-targets': 7.18.6_@babel+core@7.13.10
+      '@babel/helper-module-transforms': 7.18.6
+      '@babel/helpers': 7.18.6
+      '@babel/parser': 7.18.6
+      '@babel/template': 7.18.6
+      '@babel/traverse': 7.18.6
+      '@babel/types': 7.18.7
+      convert-source-map: 1.8.0
+      debug: 4.3.4
+      gensync: 1.0.0-beta.2
+      json5: 2.2.1
+      lodash: 4.17.21
+      semver: 6.3.0
+      source-map: 0.5.7
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/core/7.18.6:
     resolution: {integrity: sha512-cQbWBpxcbbs/IUredIPkHiAGULLV8iwgNRMFzvbhEXISp4f3rUUXE5+TIw6KwUWUR3DwyI6gmBRnmAtYaWehwQ==}
     engines: {node: '>=6.9.0'}
@@ -99,6 +125,14 @@ packages:
       - supports-color
     dev: true
 
+  /@babel/generator/7.13.9:
+    resolution: {integrity: sha512-mHOOmY0Axl/JCTkxTU6Lf5sWOg/v8nUa+Xkt4zMTftX0wqmb6Sh7J8gvcehBw7q0AhrhAR+FDacKjCZ2X8K+Sw==}
+    dependencies:
+      '@babel/types': 7.18.7
+      jsesc: 2.5.2
+      source-map: 0.5.7
+    dev: true
+
   /@babel/generator/7.18.7:
     resolution: {integrity: sha512-shck+7VLlY72a2w9c3zYWuE1pwOKEiQHV7GTUbSnhyl5eu3i04t30tBY82ZRWrDfo3gkakCFtevExnxbkf2a3A==}
     engines: {node: '>=6.9.0'}
@@ -113,6 +147,19 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.18.7
+    dev: true
+
+  /@babel/helper-compilation-targets/7.18.6_@babel+core@7.13.10:
+    resolution: {integrity: sha512-vFjbfhNCzqdeAtZflUFrG5YIFqGTqsctrtkZ1D/NB0mDW9TwW3GmmUepYY4G9wCET5rY5ugz4OGTcLd614IzQg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/compat-data': 7.18.6
+      '@babel/core': 7.13.10
+      '@babel/helper-validator-option': 7.18.6
+      browserslist: 4.21.1
+      semver: 6.3.0
     dev: true
 
   /@babel/helper-compilation-targets/7.18.6_@babel+core@7.18.6:
@@ -220,6 +267,14 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
+  /@babel/parser/7.14.6:
+    resolution: {integrity: sha512-oG0ej7efjEXxb4UgE+klVx+3j4MVo+A2vCzm7OUN4CLo6WhQ+vSOD2yJ8m7B+DghObxtLxt3EfgMWpq+AsWehQ==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+    dependencies:
+      '@babel/types': 7.18.7
+    dev: true
+
   /@babel/parser/7.18.6:
     resolution: {integrity: sha512-uQVSa9jJUe/G/304lXspfWVpKpK4euFLgGiMQFOCpM/bgcAdeoHwi/OQz23O9GK2osz26ZiXRRV9aV+Yl1O8tw==}
     engines: {node: '>=6.0.0'}
@@ -298,6 +353,22 @@ packages:
       '@babel/types': 7.18.7
     dev: true
 
+  /@babel/traverse/7.13.0:
+    resolution: {integrity: sha512-xys5xi5JEhzC3RzEmSGrs/b3pJW/o87SypZ+G/PhaE7uqVQNv/jlmVIBXuoh5atqQ434LfXV+sf23Oxj0bchJQ==}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/generator': 7.18.7
+      '@babel/helper-function-name': 7.18.6
+      '@babel/helper-split-export-declaration': 7.18.6
+      '@babel/parser': 7.18.6
+      '@babel/types': 7.18.7
+      debug: 4.3.4
+      globals: 11.12.0
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/traverse/7.18.6:
     resolution: {integrity: sha512-zS/OKyqmD7lslOtFqbscH6gMLFYOfG1YPqCKfAW5KrTeolKqvB8UelR49Fpr6y93kYkW2Ik00mT1LOGiAGvizw==}
     engines: {node: '>=6.9.0'}
@@ -314,6 +385,14 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@babel/types/7.13.0:
+    resolution: {integrity: sha512-hE+HE8rnG1Z6Wzo+MhaKE5lM5eMx71T4EHJgku2E3xIfaULhDcxiiRxUYgwX8qwP1BBSlag+TdGOt6JAidIZTA==}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.18.6
+      lodash: 4.17.21
+      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types/7.18.7:
@@ -449,6 +528,23 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       tailwindcss: 3.1.5
+    dev: true
+
+  /@trivago/prettier-plugin-sort-imports/3.2.0_prettier@2.7.1:
+    resolution: {integrity: sha512-DnwLe+z8t/dZX5xBbYZV1+C5STkyK/P6SSq3Nk6NXlJZsgvDZX2eN4ND7bMFgGV/NL/YChWzcNf6ziGba1ktQQ==}
+    peerDependencies:
+      prettier: 2.x
+    dependencies:
+      '@babel/core': 7.13.10
+      '@babel/generator': 7.13.9
+      '@babel/parser': 7.14.6
+      '@babel/traverse': 7.13.0
+      '@babel/types': 7.13.0
+      javascript-natural-sort: 0.7.1
+      lodash: 4.17.21
+      prettier: 2.7.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@types/cookie/0.4.1:
@@ -1317,6 +1413,10 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /javascript-natural-sort/0.7.1:
+    resolution: {integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==}
+    dev: true
+
   /js-levenshtein/1.1.6:
     resolution: {integrity: sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==}
     engines: {node: '>=0.10.0'}
@@ -1878,6 +1978,11 @@ packages:
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /source-map/0.5.7:
+    resolution: {integrity: sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 

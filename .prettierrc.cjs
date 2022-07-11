@@ -14,5 +14,20 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [
+    require('prettier-plugin-tailwindcss'),
+    require('@trivago/prettier-plugin-sort-imports'),
+  ],
+  importOrder: [
+    '<THIRD_PARTY_MODULES>',
+    '^@api/(.*)$',
+    '^@assets/(.*)$',
+    '^@db/(.*)$',
+    '^@server/(.*)$',
+    '^@pages/(.*)$',
+    '^@ui-kit/(.*)$',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 }

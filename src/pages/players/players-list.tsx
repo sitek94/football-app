@@ -1,5 +1,6 @@
-import {Player} from 'api/players/players.models'
 import {Link} from 'react-router-dom'
+
+import {Player} from '@api/players/players.models'
 
 interface PlayersListProps {
   players: Player[]

@@ -1,6 +1,7 @@
-import {Team} from 'api/teams/teams.models'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
+
+import {Team} from '@api/teams/teams.models'
 
 interface TeamsTableProps {
   teams: Team[]

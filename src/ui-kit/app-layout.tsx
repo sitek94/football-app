@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import {NavLink, Outlet} from 'react-router-dom'
 
-import {Footer} from 'ui-kit/footer'
+import {Footer} from '@ui-kit/footer'
 
 const navigation = [
   {

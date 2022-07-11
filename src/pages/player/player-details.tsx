@@ -1,4 +1,4 @@
-import {Player} from 'api/players/players.models'
+import {Player} from '@api/players/players.models'
 
 interface PlayerDetailsProps {
   player: Player

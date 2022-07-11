@@ -1,6 +1,8 @@
-import {useTeam} from 'api/teams/teams.hooks'
 import {useParams} from 'react-router-dom'
-import {PageHeader} from 'ui-kit/page-header'
+
+import {useTeam} from '@api/teams/teams.hooks'
+
+import {PageHeader} from '@ui-kit/page-header'
 
 export function TeamPage() {
   const {teamId} = useParams<{teamId: string}>()
