@@ -1,6 +1,6 @@
 import {ChevronRightIcon, HomeIcon} from '@heroicons/react/solid'
 import * as React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, matchPath, useLocation} from 'react-router-dom'
 import {BreadcrumbData} from 'use-react-router-breadcrumbs'
 
 interface BreadcrumbsProps {
@@ -8,21 +8,31 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({breadcrumbs}: BreadcrumbsProps) {
+  const {pathname} = useLocation()
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-4">
         {breadcrumbs.map(({breadcrumb, match, key}) => {
+          const isActive = !!matchPath(pathname, match.pathname)
+
           if (key === '/') {
+            const homeIcon = (
+              <HomeIcon
+                className="h-5 w-5 flex-shrink-0 text-gray-400"
+                aria-hidden="true"
+                aria-labe="Home"
+              />
+            )
             return (
               <li key={key}>
                 <div>
-                  <Link to="/" className="text-gray-400 hover:text-gray-500">
-                    <HomeIcon
-                      className="h-5 w-5 flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span className="sr-only">Home</span>
-                  </Link>
+                  {isActive ? (
+                    homeIcon
+                  ) : (
+                    <Link to="/" className="text-gray-400 hover:text-gray-500">
+                      {homeIcon}
+                    </Link>
+                  )}
                 </div>
               </li>
             )
@@ -34,12 +44,15 @@ export function Breadcrumbs({breadcrumbs}: BreadcrumbsProps) {
                   className="h-5 w-5 flex-shrink-0 text-gray-400"
                   aria-hidden="true"
                 />
-                <Link
-                  to={match.pathname}
-                  className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
-                >
-                  {breadcrumb}
-                </Link>
+                <div className="ml-4 text-sm font-medium text-gray-500">
+                  {isActive ? (
+                    breadcrumb
+                  ) : (
+                    <Link to={match.pathname} className="hover:text-gray-700">
+                      {breadcrumb}
+                    </Link>
+                  )}
+                </div>
               </div>
             </li>
           )
