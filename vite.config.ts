@@ -7,5 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: '/football-app/',
-  alias: [{find: '@', replacement: path.resolve(__dirname, 'src/')}],
+  resolve: {
+    alias: [{find: '@', replacement: path.resolve(__dirname, 'src/')}],
+  },
 })
