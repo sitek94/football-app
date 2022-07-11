@@ -4,6 +4,7 @@ Messing around and experimenting with:
 - [React Router v6](https://reactrouter.com/docs/en/v6)
 - Implementing breadcrumbs using [use-react-router-breadcrumbs](https://github.com/icd2k3/use-react-router-breadcrumbs)
 - [Mock Service Worker](https://mswjs.io/)
+- [React.Suspense](https://17.reactjs.org/docs/concurrent-mode-suspense.html)  
 
 ## API and data
 
