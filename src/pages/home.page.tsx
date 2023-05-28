@@ -12,7 +12,7 @@ export function HomePage() {
           The 2021–22 Premier League was the 30th season of the Premier League,
           the top English professional league for association football clubs
           since its establishment in 1992, and the 123rd season of top-flight
-          English football overall.
+          English football overall. 
         </p>
       </article>
     </>
