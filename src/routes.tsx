@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {
   BreadcrumbComponentProps,
   BreadcrumbsRoute,
@@ -16,7 +15,7 @@ import {TeamsPage} from '@pages/teams/teams.page'
 
 import {AppLayout} from '@ui-kit/app-layout'
 
-export const routes: BreadcrumbsRoute[] = [
+export const routes = [
   {
     path: '/',
     element: <AppLayout />,

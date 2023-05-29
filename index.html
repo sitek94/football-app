@@ -8,6 +8,13 @@
   </head>
   <body class="h-full">
     <div id="root" class="h-full"></div>
+    <script>
+        // If there's a path saved in the session storage, update the URL to include this path
+        if (sessionStorage.redirect) {
+          history.replaceState(null, null, sessionStorage.redirect);
+          sessionStorage.removeItem('redirect');
+        }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

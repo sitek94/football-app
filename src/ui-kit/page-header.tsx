@@ -12,7 +12,8 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({title, links}: PageHeaderProps) {
-  const breadcrumbs = useReactRouterBreadcrumbs(routes)
+  // TODO: Fix types
+  const breadcrumbs = useReactRouterBreadcrumbs(routes as any)
 
   return (
     <div className="mb-8 lg:flex lg:items-center lg:justify-between">
