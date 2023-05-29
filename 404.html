@@ -3,7 +3,7 @@
 <body>
     <script>
         // Save the URL path (excluding the "/football-app" part)
-        sessionStorage.redirect = location.pathname.slice('/football-app'.length);
+        sessionStorage.redirect = location.pathname.slice();
 
         // Redirect to the root URL
         location.replace('/football-app');
